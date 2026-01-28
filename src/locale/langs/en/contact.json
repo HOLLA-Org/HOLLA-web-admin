@@ -1,0 +1,26 @@
+{
+  "quoteToday": "Get A Quote Today",
+  "fullName": "Full name",
+  "phoneNumber": "Phone number",
+  "preferenceService": "Service Preference",
+  "Message": "Message",
+  "requiredFullname": "Please enter your full name",
+  "invalidEmail": "Please enter correct email format",
+  "pleasePhone": "Please enter your phone number",
+  "invalidPhoneFormat": "Please enter correct phone number format",
+  "pleasePreference": "Please select a preference",
+  "requiredMessage": "Please enter a message",
+  "contactNow": "Contact now",
+  "thankInformation": "Thank you for leaving your information",
+  "WeCan": "We’ll get back to you as soon as we can!",
+  "writeMessage": "Write your message...",
+  "processing": "Processing...",
+  "signUp": "Sign up",
+  "signIn": "Sign in",
+  "dialogExcel": {
+    "title": "This feature is being updated",
+    "description": "Please come back later!",
+    "confirmText": "Yes",
+    "cancelText": "Cancel"
+  }
+}
