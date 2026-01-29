@@ -1,82 +1,22 @@
 import { apiClient } from '../lib/api-client';
-import { OtpPurpose } from '@/lib/otp-storage';
-
-// Payload types
-export type RegisterPayload = {
-  username: string;
-  email: string;
-  password: string;
-  confirmPassword: string;
-  phone?: string;
-  address?: string;
-  gender?: string;
-  date_of_birth?: string;
-};
-
-export type LoginPayload = {
-  account: string;
-  password: string;
-};
-
-export type ResetPayload = {
-  token: string;
-  newPassword: string;
-};
-
-export type VerifyPayload = {
-  email: string;
-  codeId: string;
-};
-
-export type ResendCodePayload = {
-  email: string;
-};
-
-export type CheckValidCodePayload = {
-  email: string;
-  code: string;
-};
-
-// Response types for Nest.js API
-export type UserData = {
-  _id: string;
-  email: string;
-  username: string;
-  role: string;
-};
-
-export type TokenData = {
-  accessToken: string;
-  refreshToken: string;
-};
-
-export type AuthResponse = {
-  user: UserData;
-  accessToken: string;
-  refreshToken: string;
-};
-
-// Mapped response types for frontend use
-export type RegisterResponse = {
-  ok: boolean;
-  redirectTo: string;
-  message?: string;
-  user?: UserData;
-};
-
-export type LoginResponse = {
-  ok: boolean;
-  redirectTo: string;
-  message?: string;
-  user?: UserData;
-  accessToken?: string;
-  refreshToken?: string;
-};
-
-export type ResetResponse = { ok: boolean; message?: string };
-export type SendResetResponse = { ok: boolean; redirectTo: string; message?: string };
-export type VerifyOtpResponse = { ok: boolean; message?: string, token?: string };
-export type ResendOtpResponse = { ok: boolean; message?: string };
+import {
+  RegisterPayload,
+  LoginPayload,
+  ResetPayload,
+  VerifyPayload,
+  ResendCodePayload,
+  CheckValidCodePayload
+} from '@/types/api/request/auth.request';
+import {
+  UserData,
+  AuthResponse,
+  RegisterResponse,
+  LoginResponse,
+  ResetResponse,
+  SendResetResponse,
+  VerifyOtpResponse,
+  ResendOtpResponse
+} from '@/types/api/response/auth.response';
 
 export const authService = {
   /**

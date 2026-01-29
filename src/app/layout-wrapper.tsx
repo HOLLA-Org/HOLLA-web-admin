@@ -1,7 +1,7 @@
 'use client';
 import { Suspense } from 'react';
 import { usePathname } from 'next/navigation';
-import NavBar from '@/components/nav-bar';
+// import NavBar from '@/components/nav-bar';
 
 import { AuthProvider } from '@/lib/auth-provider';
 import { QueryProvider } from '@/lib/query-provider';
@@ -25,19 +25,19 @@ export default function LayoutWrapper({ children }: { children: React.ReactNode 
 
   return (
     <AuthProvider>
-        <QueryProvider>
-            <LanguageProvider>
-              <Suspense fallback={null}>
-                <NavigationLoading />
-              </Suspense>
-              <div className="flex min-h-screen flex-col">
-                {!isHidden && <NavBar />}
-                <main className="flex-1">{children}</main>
+      <QueryProvider>
+        <LanguageProvider>
+          <Suspense fallback={null}>
+            {/* <NavigationLoading /> */}
+          </Suspense>
+          <div className="flex min-h-screen flex-col">
+            {/* {!isHidden && <NavBar />} */}
+            <main className="flex-1">{children}</main>
 
-              </div>
-              <Toaster position="top-center" duration={2000} richColors />
-            </LanguageProvider>
-        </QueryProvider>
+          </div>
+          <Toaster position="top-center" duration={2000} richColors />
+        </LanguageProvider>
+      </QueryProvider>
     </AuthProvider>
   );
 }
