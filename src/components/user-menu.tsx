@@ -3,6 +3,7 @@
 import { LogOut, ChevronDown } from 'lucide-react';
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
+import { useTranslation } from 'react-i18next';
 
 import { useNextAuth } from '@/hooks/use-next-auth';
 
@@ -15,9 +16,21 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
+import {
+  AlertDialog,
+  AlertDialogAction,
+  AlertDialogCancel,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogTitle,
+  AlertDialogTrigger,
+} from "@/components/ui/alert-dialog";
 import Loading from '@/components/custom/custom-loading';
 
 export function UserMenu() {
+  const { t } = useTranslation('auth');
   const { logout, user } = useNextAuth();
   const router = useRouter();
   const [isLoggingOut, setIsLoggingOut] = useState(false);
@@ -48,7 +61,7 @@ export function UserMenu() {
 
   return (
     <>
-      <Loading loading={isLoggingOut}/>
+      <Loading loading={isLoggingOut} />
       <DropdownMenu>
         <DropdownMenuTrigger className="flex items-center gap-2 outline-none hover:bg-gray-100 p-2 rounded-md transition text-left">
           <Avatar className="size-9">
@@ -72,10 +85,35 @@ export function UserMenu() {
 
           <DropdownMenuSeparator />
 
-          <DropdownMenuItem onClick={handleLogout} disabled={isLoggingOut} className="cursor-pointer text-red-600 focus:text-red-600 focus:bg-red-50">
-            <LogOut className="mr-2 size-4" />
-            <span>{isLoggingOut ? 'Logging out...' : 'Logout'}</span>
-          </DropdownMenuItem>
+          <AlertDialog>
+            <AlertDialogTrigger asChild>
+              <DropdownMenuItem
+                onSelect={(e) => e.preventDefault()}
+                disabled={isLoggingOut}
+                className="cursor-pointer text-red-600 focus:text-red-600 focus:bg-red-50"
+              >
+                <LogOut className="mr-2 size-4" />
+                <span>{isLoggingOut ? 'Logging out...' : 'Logout'}</span>
+              </DropdownMenuItem>
+            </AlertDialogTrigger>
+            <AlertDialogContent>
+              <AlertDialogHeader>
+                <AlertDialogTitle>{t('logout.title')}</AlertDialogTitle>
+                <AlertDialogDescription>
+                  {t('logout.description')}
+                </AlertDialogDescription>
+              </AlertDialogHeader>
+              <AlertDialogFooter>
+                <AlertDialogCancel>{t('logout.cancel')}</AlertDialogCancel>
+                <AlertDialogAction
+                  onClick={handleLogout}
+                  className="bg-red-600 hover:bg-red-700 font-bold"
+                >
+                  {t('logout.confirm')}
+                </AlertDialogAction>
+              </AlertDialogFooter>
+            </AlertDialogContent>
+          </AlertDialog>
         </DropdownMenuContent>
       </DropdownMenu>
     </>
