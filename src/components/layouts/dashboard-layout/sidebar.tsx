@@ -25,7 +25,6 @@ import {
   AlertDialogTitle,
   AlertDialogTrigger,
 } from "@/components/ui/alert-dialog";
-import ProfileDropdownRow from './profile-dropdown';
 import {
   Bell,
   Calendar,
@@ -34,14 +33,14 @@ import {
   LayoutDashboard,
   Settings,
   User,
-  Power, // Added
+  Power,
   BriefcaseMedical,
   Building2,
   CalendarRange,
 } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { useCallback, useEffect, useState } from 'react';
-import { signOut } from 'next-auth/react'; // Added
+import { signOut } from 'next-auth/react';
 import { useTranslation } from 'react-i18next';
 
 type Item = {
@@ -85,10 +84,8 @@ export default function AppSidebar() {
     },
   ];
 
-  // highlight menu user just clicked (during route transition)
   const [pendingHref, setPendingHref] = useState<string | null>(null);
 
-  // when route changed => clear pending
   useEffect(() => {
     setPendingHref(null);
   }, [pathname]);
@@ -96,7 +93,7 @@ export default function AppSidebar() {
 
   const handleNavigate = useCallback(
     (href: string) => {
-      setPendingHref(href);   // show target active immediately (no flicker)
+      setPendingHref(href);
     },
     []
   );
@@ -148,12 +145,13 @@ export default function AppSidebar() {
                         onClick={() => handleNavigate(item.href)}
                         className="flex items-center gap-3 px-3"
                       >
-                        <item.icon
-                          className={cn(
-                            "h-5 w-5 transition-colors",
-                            isActive ? "text-white group-hover:text-white" : "text-slate-400 group-hover:text-[#238C98]"
-                          )}
-                        />
+                        {/* Directly rendering item.icon to ensure it's themed correctly */}
+                        <div className={cn(
+                          "transition-colors",
+                          isActive ? "text-white" : "text-slate-400 group-hover:text-[#238C98]"
+                        )}>
+                          <item.icon className="h-5 w-5" />
+                        </div>
                         <span className="truncate font-semibold">{item.title}</span>
                       </Link>
                     </SidebarMenuButton>
@@ -171,6 +169,7 @@ export default function AppSidebar() {
             <AlertDialogTrigger asChild>
               <button
                 className="flex w-full items-center gap-3 rounded-lg px-2 py-2 text-sm font-medium text-gray-500 hover:bg-gray-50 hover:text-gray-900 transition-colors"
+                aria-label="Logout"
               >
                 <Power className="h-5 w-5" />
                 <span className="group-data-[collapsible=icon]:hidden">{t('dashboard:sidebar.logout')}</span>

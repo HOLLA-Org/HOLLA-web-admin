@@ -130,7 +130,7 @@ axiosInstance.interceptors.response.use(
 /** API client helper - handles NestJS response format */
 export async function apiClient<T>(
   endpoint: string,
-  options: Omit<AxiosRequestConfig, 'baseURL' | 'url'> = {}
+  options: Omit<AxiosRequestConfig, 'baseURL' | 'url'> & { returnFullResponse?: boolean } = {}
 ): Promise<T> {
   try {
     const res: AxiosResponse = await axiosInstance({ url: endpoint, ...options });
@@ -139,6 +139,9 @@ export async function apiClient<T>(
     // NestJS success response format: { statusCode: 200/201, message, data }
     // Or custom format: { code: '00', message, data }
     if (data && typeof data === 'object' && 'data' in data) {
+      if (options.returnFullResponse) {
+        return data as T;
+      }
       return data.data as T;
     }
 
