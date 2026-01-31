@@ -1,0 +1,100 @@
+{
+    "title": "Hotel List",
+    "add_hotel": "Add Hotel",
+    "add_images": "Add Images",
+    "tabs": {
+      "all": "All",
+      "popular": "Popular"
+    },
+    "table": {
+      "stt": "#",
+      "hotel": "Hotel",
+      "image": "Image",
+      "address": "Address",
+      "price_hour": "Price / Hour",
+      "price_day": "Price / Day",
+      "status": "Status",
+      "action": "Action",
+      "no_data": "No hotels found."
+    },
+    "status_label": {
+      "available": "Available",
+      "out_of_stock": "Out of Stock"
+    },
+    "messages": {
+      "delete_confirm": "Are you sure you want to delete this hotel?",
+      "delete_confirm_title": "Delete Hotel",
+      "delete_confirm_description": "Are you sure you want to delete this hotel? This action cannot be undone.",
+      "delete_success": "Hotel deleted successfully",
+      "delete_error": "Failed to delete hotel",
+      "load_error": "Error loading hotels. Please try again.",
+      "create_success": "Hotel created successfully",
+      "create_error": "Failed to create hotel",
+      "update_success": "Hotel updated successfully",
+      "update_error": "Failed to update hotel",
+      "generic_error": "An error occurred. Please try again."
+    },
+    "common": {
+        "cancel": "Cancel",
+        "delete": "Delete"
+    },
+    "pagination": {
+        "page": "Page",
+        "of": "of",
+        "next": "Next"
+    },
+    "dialog": {
+        "edit_title": "Edit Hotel",
+        "add_title": "Add New Hotel",
+        "edit_desc": "Update the details of your hotel listing.",
+        "add_desc": "Fill in the information to create a new hotel listing."
+    },
+    "form": {
+      "name": "Hotel Name",
+      "address": "Address",
+      "price_hour": "Price per Hour",
+      "price_day": "Price per Day",
+      "total_rooms": "Total Rooms",
+      "available_rooms": "Available Rooms",
+      "popular": "Popular Hotel",
+      "popular_desc": "Show this hotel in the popular section.",
+      "amenities": "Amenities",
+      "select_amenities": "Select amenities...",
+      "search_amenities": "Search amenities...",
+      "no_amenities": "No amenities found.",
+      "cancel": "Cancel",
+      "save": "Save Changes",
+      "create": "Create Hotel",
+      "placeholders": {
+          "name": "Kim Hotel"
+      }
+    },
+    "amenity_dialog": {
+        "title": "Add New Amenity",
+        "description": "Create a new amenity to add to hotels.",
+        "form": {
+            "name": "Name",
+            "name_placeholder": "Wifi, Pool,...",
+            "icon": "Icon URL",
+            "icon_placeholder": "https://example.com/icon.png (optional)",
+            "icon_desc": "Use FontAwesome or Lucide icon names.",
+            "cancel": "Cancel",
+            "create": "Create Amenity"
+        },
+        "messages": {
+            "success": "Amenity created successfully",
+            "error": "Failed to create amenity",
+            "delete_success": "Amenity deleted successfully",
+            "delete_error": "Failed to delete amenity",
+            "generic_error": "An error occurred. Please try again."
+        },
+        "delete_confirm_title": "Delete Amenity",
+        "delete_confirm_desc": "Are you sure you want to delete amenity \"{{name}}\"? This action cannot be undone."
+    },
+    "validation": {
+       "name_min": "Name must be at least 2 characters",
+       "address_min": "Address must be at least 5 characters",
+       "positive_price": "Price must be positive",
+       "positive_rooms": "Rooms must be positive"
+    }
+  }

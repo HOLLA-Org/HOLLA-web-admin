@@ -1,0 +1,100 @@
+{
+    "title": "Danh sách khách sạn",
+    "add_hotel": "Thêm khách sạn",
+    "add_images": "Thêm ảnh",
+    "tabs": {
+      "all": "Tất cả",
+      "popular": "Phổ biến"
+    },
+    "table": {
+      "stt": "STT",
+      "hotel": "Khách sạn",
+      "image": "Ảnh",
+      "address": "Địa chỉ",
+      "price_hour": "Giá / Giờ",
+      "price_day": "Giá / Ngày",
+      "status": "Trạng thái",
+      "action": "Hành động",
+      "no_data": "Không tìm thấy khách sạn nào."
+    },
+    "status_label": {
+      "available": "Còn phòng",
+      "out_of_stock": "Hết phòng"
+    },
+    "messages": {
+      "delete_confirm": "Bạn có chắc chắn muốn xóa khách sạn này không?",
+      "delete_confirm_title": "Xóa khách sạn",
+      "delete_confirm_description": "Bạn có chắc chắn muốn xóa khách sạn này không? Hành động này không thể hoàn tác.",
+      "delete_success": "Xóa khách sạn thành công",
+      "delete_error": "Xóa khách sạn thất bại",
+      "load_error": "Lỗi khi tải danh sách khách sạn. Vui lòng thử lại.",
+      "create_success": "Tạo khách sạn thành công",
+      "create_error": "Tạo khách sạn thất bại",
+      "update_success": "Cập nhật khách sạn thành công",
+      "update_error": "Cập nhật khách sạn thất bại",
+      "generic_error": "Có lỗi xảy ra. Vui lòng thử lại."
+    },
+    "common": {
+        "cancel": "Hủy",
+        "delete": "Xóa"
+    },
+    "pagination": {
+        "page": "Trang",
+        "of": "của",
+        "next": "Tiếp theo"
+    },
+    "dialog": {
+        "edit_title": "Sửa khách sạn",
+        "add_title": "Thêm khách sạn mới",
+        "edit_desc": "Cập nhật thông tin chi tiết khách sạn của bạn.",
+        "add_desc": "Điền thông tin để tạo mới khách sạn."
+    },
+    "form": {
+      "name": "Tên khách sạn",
+      "address": "Địa chỉ",
+      "price_hour": "Giá theo giờ",
+      "price_day": "Giá theo ngày",
+      "total_rooms": "Tổng số phòng",
+      "available_rooms": "Số phòng trống",
+      "popular": "Khách sạn phổ biến",
+      "popular_desc": "Hiển thị khách sạn này ở mục phổ biến.",
+      "amenities": "Tiện ích",
+      "select_amenities": "Chọn tiện ích...",
+      "search_amenities": "Tìm kiếm tiện ích...",
+      "no_amenities": "Không tìm thấy tiện ích.",
+      "cancel": "Hủy",
+      "save": "Lưu thay đổi",
+      "create": "Tạo khách sạn",
+      "placeholders": {
+          "name": "Khách sạn Kim"
+      }
+    },
+    "amenity_dialog": {
+        "title": "Thêm tiện ích mới",
+        "description": "Tạo tiện ích mới để thêm vào khách sạn.",
+        "form": {
+            "name": "Tên tiện ích",
+            "name_placeholder": "Wifi, Bể bơi,...",
+            "icon": "URL biểu tượng",
+            "icon_placeholder": "https://example.com/icon.png (tùy chọn)",
+            "icon_desc": "Sử dụng tên biểu tượng FontAwesome hoặc Lucide.",
+            "cancel": "Hủy",
+            "create": "Tạo tiện ích"
+        },
+        "messages": {
+            "success": "Tạo tiện ích thành công",
+            "error": "Tạo tiện ích thất bại",
+            "delete_success": "Xóa tiện ích thành công",
+            "delete_error": "Xóa tiện ích thất bại",
+            "generic_error": "Có lỗi xảy ra. Vui lòng thử lại."
+        },
+        "delete_confirm_title": "Xóa tiện ích",
+        "delete_confirm_desc": "Bạn có chắc chắn muốn xóa tiện ích \"{{name}}\" không? Hành động này không thể hoàn tác."
+    },
+    "validation": {
+      "name_min": "Tên phải có ít nhất 2 ký tự",
+      "address_min": "Địa chỉ phải có ít nhất 5 ký tự",
+      "positive_price": "Giá phải là số dương",
+      "positive_rooms": "Số phòng phải là số dương"
+    }
+  }
