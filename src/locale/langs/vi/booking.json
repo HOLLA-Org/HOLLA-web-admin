@@ -1,0 +1,55 @@
+{
+    "title": "Danh sách đặt phòng",
+    "tabs": {
+        "pending": "Chờ xác nhận",
+        "active": "Đang hoạt động",
+        "completed": "Hoàn thành",
+        "cancelled": "Đã hủy"
+    },
+    "table": {
+        "stt": "STT",
+        "customer": "Tên khách hàng",
+        "hotel": "Khách sạn",
+        "check_in": "Ngày nhận phòng",
+        "check_out": "Ngày trả phòng",
+        "type": "Kiểu",
+        "price": "Giá",
+        "status": "Trạng thái",
+        "action": "Hành động"
+    },
+    "status": {
+        "pending": "Chờ xác nhận",
+        "active": "Đang sử dụng",
+        "completed": "Hoàn thành",
+        "cancelled": "Đã hủy"
+    },
+    "type": {
+        "per_hour": "Theo giờ",
+        "per_day": "Theo ngày"
+    },
+    "actions": {
+        "confirm_payment": "Xác nhận thanh toán",
+        "confirm_checkout": "Xác nhận rời phòng",
+        "cancel": "Hủy"
+    },
+    "pagination": {
+        "page": "Trang",
+        "of": "của",
+        "next": "Tiếp theo"
+    },
+    "messages": {
+        "load_error": "Không thể tải danh sách đặt phòng",
+        "no_data": "Không tìm thấy đặt phòng nào",
+        "action_success": "Thao tác thành công",
+        "action_fail": "Thao tác thất bại",
+        "error_occurred": "Đã xảy ra lỗi",
+        "confirm_payment_title": "Xác nhận nhận phòng",
+        "confirm_payment_desc": "Xác nhận khách đến nhận phòng, đã thanh toán và bắt đầu tính thời gian sử dụng?",
+        "confirm_checkout_title": "Xác nhận trả phòng",
+        "confirm_checkout_desc": "Xác nhận khách chắc chắn hoàn tất thủ tục trả phòng và rời khỏi phòng?",
+        "cancel_booking_title": "Hủy đặt phòng",
+        "cancel_booking_desc": "Bạn có chắc chắn muốn hủy đặt phòng này không? Hành động này không thể hoàn tác.",
+        "cancel": "Hủy",
+        "confirm": "Xác nhận"
+    }
+}
