@@ -1,0 +1,55 @@
+{
+    "title": "Booking List",
+    "tabs": {
+        "pending": "Pending",
+        "active": "Active",
+        "completed": "Completed",
+        "cancelled": "Cancelled"
+    },
+    "table": {
+        "stt": "STT",
+        "customer": "Customer Name",
+        "hotel": "Hotel",
+        "check_in": "Check-in",
+        "check_out": "Check-out",
+        "type": "Type",
+        "price": "Price",
+        "status": "Status",
+        "action": "Action"
+    },
+    "status": {
+        "pending": "Pending",
+        "active": "In Use",
+        "completed": "Completed",
+        "cancelled": "Cancelled"
+    },
+    "type": {
+        "per_hour": "Hourly",
+        "per_day": "Daily"
+    },
+    "actions": {
+        "confirm_payment": "Confirm Payment",
+        "confirm_checkout": "Check-out",
+        "cancel": "Cancel"
+    },
+    "pagination": {
+        "page": "Page",
+        "of": "of",
+        "next": "Next"
+    },
+    "messages": {
+        "load_error": "Failed to load bookings",
+        "no_data": "No bookings found",
+        "action_success": "Action successful",
+        "action_fail": "Action failed",
+        "error_occurred": "An error occurred",
+        "confirm_payment_title": "Confirm Booking",
+        "confirm_payment_desc": "Confirm that the guest has arrived, paid, and start usage time?",
+        "confirm_checkout_title": "Confirm Checkout",
+        "confirm_checkout_desc": "Confirm that the guest has certainly completed checkout procedures and left the room?",
+        "cancel_booking_title": "Cancel Booking",
+        "cancel_booking_desc": "Are you sure you want to cancel this booking? This cannot be undone.",
+        "cancel": "Cancel",
+        "confirm": "Confirm"
+    }
+}
