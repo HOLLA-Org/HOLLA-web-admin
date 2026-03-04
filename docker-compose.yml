@@ -1,0 +1,11 @@
+services:
+  web-admin:
+    build: .
+    container_name: holla-web-admin
+    ports:
+      - "3000:3000"
+    env_file:
+      - .env
+    restart: always
+
+# docker compose -p holla-admin up -d
