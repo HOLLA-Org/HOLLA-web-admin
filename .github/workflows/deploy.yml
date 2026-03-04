@@ -2,7 +2,7 @@ name: Deploy to VPS
 
 on:
   push:
-    branches: [main]
+    branches: [production]
 
 jobs:
   deploy:
@@ -18,7 +18,7 @@ jobs:
           script: |
             cd /var/www/HOLLA-web-admin
             git fetch origin
-            git checkout main
-            git pull origin main
+            git checkout production
+            git pull origin production
             docker compose -p holla-admin down
             docker compose -p holla-admin up -d --build
